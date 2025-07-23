@@ -1,26 +1,76 @@
 body {
-    font-family: "Cairo", sans-serif;
-    direction: rtl;
-    background-color: #f8f9fa;
-    color: #333;
+  font-family: 'Cairo', sans-serif;
+  direction: rtl;
+  background-color: #f8f9fa;
+  color: #333;
+  scroll-behavior: smooth;
 }
 
 .hero {
-    background: linear-gradient(to left, #0d6efd, #084298);
-    padding: 100px 0;
+  background: linear-gradient(to left, #0d6efd, #084298);
+  padding: 100px 0;
+  animation: slideDown 1.2s ease-out;
 }
 
 h1, h2, h3 {
-    font-weight: bold;
+  font-weight: bold;
+}
+
+.logo {
+  width: 100px;
+  height: auto;
+  border-radius: 50%;
+  background-color: white;
+  padding: 10px;
+}
+
+.animate {
+  animation: fadeInUp 1s ease-in-out;
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 1s forwards;
+  animation-delay: 0.5s;
 }
 
 .list-group-item {
-    font-size: 1.1rem;
-    background-color: #fff;
-    border: none;
-    padding: 12px 20px;
+  font-size: 1.1rem;
+  background-color: #fff;
+  border: none;
+  padding: 12px 20px;
 }
 
 footer {
-    font-size: 0.9rem;
+  font-size: 0.9rem;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
