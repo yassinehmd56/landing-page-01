@@ -3,36 +3,33 @@ body {
   direction: rtl;
   background-color: #f8f9fa;
   color: #333;
-  scroll-behavior: smooth;
 }
 
 .hero {
   background: linear-gradient(to left, #0d6efd, #084298);
   padding: 100px 0;
-  animation: slideDown 1.2s ease-out;
-}
-
-h1, h2, h3 {
-  font-weight: bold;
+  position: relative;
+  overflow: hidden;
 }
 
 .logo {
   width: 100px;
-  height: auto;
   border-radius: 50%;
-  background-color: white;
-  padding: 10px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
+  animation: floatLogo 3s ease-in-out infinite;
 }
 
-.animate {
-  animation: fadeInUp 1s ease-in-out;
+@keyframes floatLogo {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
 }
 
-.fade-in {
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeIn 1s forwards;
-  animation-delay: 0.5s;
+h1, h2, h3 {
+  font-weight: bold;
 }
 
 .list-group-item {
@@ -46,31 +43,26 @@ footer {
   font-size: 0.9rem;
 }
 
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(40px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+/* زر واتساب */
+.whatsapp-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25D366;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 50px;
+  font-size: 16px;
+  font-weight: bold;
+  z-index: 999;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: background 0.3s;
 }
 
-@keyframes fadeIn {
-  to {
-    opacity: 1;
-    transform: none;
-  }
-}
-
-@keyframes slideDown {
-  from {
-    opacity: 0;
-    transform: translateY(-40px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.whatsapp-btn:hover {
+  background-color: #1ebe5d;
 }
