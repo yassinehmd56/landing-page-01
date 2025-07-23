@@ -1,17 +1,26 @@
 body {
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-family: "Cairo", sans-serif;
     direction: rtl;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+.hero {
+    background: linear-gradient(to left, #0d6efd, #084298);
+    padding: 100px 0;
 }
 
 h1, h2, h3 {
-    font-weight: 700;
+    font-weight: bold;
 }
 
 .list-group-item {
     font-size: 1.1rem;
+    background-color: #fff;
+    border: none;
+    padding: 12px 20px;
 }
 
-.btn-primary {
-    background-color: #0d6efd;
-    border-color: #0d6efd;
+footer {
+    font-size: 0.9rem;
 }
